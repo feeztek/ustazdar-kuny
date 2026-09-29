@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ұстаздар күні 🌷</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fff5f8, #eef7ff);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content {
+      max-width: 800px;
+      background: rgba(255,255,255,0.85);
+      padding: 50px 30px;
+      border-radius: 30px;
+      box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+      backdrop-filter: blur(10px);
+      animation: appear 1.2s ease;
+    }
+
+    .flower {
+      font-size: 65px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 20px 0;
+      color: #d45b83;
+    }
+
+    h2 {
+      font-size: 25px;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    p {
+      font-size: 19px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 14px 28px;
+      background: #d45b83;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 17px;
+      transition: 0.3s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      background: #b8446b;
+    }
+
+    .message {
+      display: none;
+      margin-top: 25px;
+      padding: 25px;
+      background: #fff0f5;
+      border-radius: 20px;
+      animation: appear 0.7s ease;
+    }
+
+    .message p {
+      margin: 0;
+      color: #555;
+    }
+
+    .hearts {
+      position: absolute;
+      font-size: 25px;
+      animation: fall linear infinite;
+      opacity: 0.6;
+    }
+
+    .h1 { left: 10%; animation-duration: 8s; }
+    .h2 { left: 30%; animation-duration: 10s; }
+    .h3 { left: 55%; animation-duration: 7s; }
+    .h4 { left: 80%; animation-duration: 9s; }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    @keyframes fall {
+      from {
+        top: -50px;
+      }
+      to {
+        top: 110%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 35px;
+      }
+
+      h2 {
+        font-size: 21px;
+      }
+
+      p {
+        font-size: 17px;
+      }
+
+      .content {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="hearts h1">🌸</div>
+  <div class="hearts h2">✨</div>
+  <div class="hearts h3">🌷</div>
+  <div class="hearts h4">💐</div>
+
+  <section class="hero">
+    <div class="content">
+
+      <div class="flower">🌷</div>
+
+      <h1>Ұстаздар күні</h1>
+
+      <h2>Құрметті ұстаздар!</h2>
+
+      <p>
+        Сіздерді Ұстаздар күнімен шын жүректен құттықтаймыз! 💐
+      </p>
+
+      <p>
+        Бізге білім беріп, әрқашан қолдау көрсетіп,
+        дұрыс жол көрсетуге көмектескендеріңіз үшін
+        үлкен рақмет!
+      </p>
+
+      <p>
+        Сіздерге зор денсаулық, мол бақыт,
+        шығармашылық табыс және әр күннің қуанышын тілейміз! ❤️
+      </p>
+
+      <button class="button" onclick="showMessage()">
+        Арнайы құттықтау 💌
+      </button>
+
+      <div class="message" id="message">
+        <p>
+          🌟 Ұстаз — білімнің шамшырағы.<br><br>
+          Сіздің еңбегіңіз бен берген біліміңіз
+          біздің болашағымызға үлкен жол ашады.
+          Еңбегіңіз үшін мың алғыс! 🌷
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    ❤️ Ізгі ниетпен, оқушыларыңыздан
+  </footer>
+
+  <script>
+    function showMessage() {
+      const message = document.getElementById("message");
+
+      if (message.style.display === "block") {
+        message.style.display = "none";
+      } else {
+        message.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
